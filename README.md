@@ -9,6 +9,6 @@ functions:
 
     - getInputs() = extracts the values of: name(description), value(amount) => return newObj
 
-    - addToArr() = decide by elemToggle which arr (totalExpense / totalIncome) to push the newObj that getInputs() created
+    - addToArr() =  by elemToggle which arr (totalExpense / totalIncome) to push the newObj that getInputs() created
 
     -
