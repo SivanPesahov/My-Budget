@@ -11,4 +11,5 @@ functions:
 
     - addToArr() =  by elemToggle which arr (totalExpense / totalIncome) to push the newObj that getInputs() created
 
-    -
+    -other funcs
+
