@@ -1,0 +1,167 @@
+/* FLEX-GRID UTILS */
+
+/*  FLEX CONTAINER */
+.flex {
+  display: flex;
+}
+
+/*  FLEX DIRECTION */
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/*  FLEX WRAP */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.flex-nowrap-reverse {
+  flex-wrap: nowrap-reverse;
+}
+
+/*  FLEX FLOW  (main axis) */
+.flex-justify-start {
+  justify-content: flex-start;
+}
+.flex-justify-end {
+  justify-content: flex-end;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-space-between {
+  justify-content: space-between;
+}
+.flex-justify-space-around {
+  justify-content: space-around;
+}
+.flex-justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/*  FLEX FLOW  (cross axis) */
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-align-end {
+  align-items: flex-end;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-baseline {
+  align-items: baseline;
+}
+.flex-align-stretch {
+  align-items: stretch;
+}
+
+/*  FLEX GROW*/
+.flex-grow-0 {
+  flex-grow: 0;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-grow-2 {
+  flex-grow: 2;
+}
+.flex-grow-3 {
+  flex-grow: 3;
+}
+.flex-grow-4 {
+  flex-grow: 4;
+}
+
+/* GRID */
+
+/*  grid container */
+.grid {
+  display: grid;
+}
+
+/*  grid template columns */
+.grid-columns-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-columns-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-columns-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-columns-5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+/*  grid template rows */
+.grid-rows-2 {
+  grid-template-rows: 1fr 1fr;
+}
+.grid-rows-3 {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.grid-rows-4 {
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.grid-rows-5 {
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-rows-6 {
+  grid-template-rows: repeat(6, 1fr);
+}
+.grid-rows-7 {
+  grid-template-rows: repeat(7, 1fr);
+}
+.grid-rows-8 {
+  grid-template-rows: repeat(8, 1fr);
+}
+
+/*  gap (works for both grid and flex) */
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-7 {
+  gap: 1.75rem;
+}
+.gap-8 {
+  gap: 2rem;
+}

@@ -1,0 +1,37 @@
+/* LAYOUT UTILS */
+
+/* wrapper */
+.wrapper {
+  /* one way of doing it 👇 */
+  /* max-width: 1160pxpx; */
+  /* margin: 0 auto; */
+  /* padding: 0 2rem; */
+
+  /*  another way of doing it (recommended) 👇 */
+  width: min(var(--large-brakepoint), 100% - 4rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* flow */
+/* selct all the direct children, except the first one 👇*/
+.flow>*+* {
+  margin-top: 2em;
+}
+
+/*  grid auto columns */
+/* How it works❓: 
+  1. auto-fit - create as many columns as possible 
+  2. minmax - set the minimum and maximum size of the column
+  3. 1fr - create equal width columns
+  4. min - set the minimum size of the column (--min-column-size or 100%)
+  5. repeat - repeat the pattern
+*/
+.auto-grid {
+  --min-column-size: 15rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(var(--min-column-size), 100%), 1fr));
+}
