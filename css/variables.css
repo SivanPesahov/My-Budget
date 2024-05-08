@@ -1,0 +1,16 @@
+:root {
+  --clr-primary-400: hsl(14, 45%, 36%);
+  --clr-primary-500: hsl(332, 51%, 32%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-120: hsl(330, 100%, 98%);
+  --clr-neutral-150: hsl(30, 54%, 90%);
+  --clr-neutral-200: hsl(30, 18%, 87%);
+  --clr-neutral-450: hsl(30, 10%, 34%);
+  --clr-neutral-750: hsl(24, 5%, 18%);
+
+  --large-brakepoint: 375px;
+  --small-brakepoint: 1440px;
+
+  --nav-height: 4rem;
+}

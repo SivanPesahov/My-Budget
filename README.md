@@ -24,10 +24,11 @@ functions:
 
     - saveToLocalStorage(key, arr) = saves the updated arr to local storage under its key
 
+    - toggleClicked() = change the color of the input based on the toggleElement.value
 
+    - * eventListener onClick 'enter' => submit()
 
-
-
+    - * validateInput(newObj) = validates negetive number or row without description
 
 
 

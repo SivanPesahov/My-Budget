@@ -1,0 +1,18 @@
+/* INPUT COMPONENT */
+
+input,
+textarea {
+  display: block;
+  border: 1px solid var(--clr-neutral-300);
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: var(--clr-primary-400) auto 5px;
+}

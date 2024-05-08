@@ -1,0 +1,13 @@
+/* TYPOGRAPHY UTILS */
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.big {
+  font-size: xx-large;
+}
