@@ -19,13 +19,22 @@ functions:
 
     - updateBalance(totalExpene, totalIncome) = update elemBalance (totalExpense - totalIncome)
 
+
+
+
+
+
     - addRow(newObj, elemList) = creates a new div (of row in a list) that contains the newObj.description, newObj.amount - and inserts it to elemList innerHtml - the row contains in addition a button that delets the new row with onClick deleteRow(this)
 
     - deleteRow(element) = find index of element inside elemList.children.indexOf(element) and splice it from the corresponding array, using element.remove to remove it from the DOM, update sum of corresponding array, updateBalance saveToLocalStorage(key, arr)
 
+
+
     - saveToLocalStorage(key, arr) = saves the updated arr to local storage under its key
 
-    - toggleClicked() = change the color of the input based on the toggleElement.value
+
+
+    - toggleClicked() = change the color of the input and V based on the toggleElement.value
 
     - * eventListener onClick 'enter' => submit()
 

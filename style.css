@@ -1,5 +1,81 @@
-@import url("./css/reset.css");
-@import url("./css/variables.css");
+@import "css/reset.css";
+@import "css/variables.css";
+
+/*  UTILS */
+@import "css/utils/layout.utils.css";
+@import "css/utils/spacing.utils.css";
+@import "css/utils/typography.utils.css";
+@import "css/utils/flex-grid.utils.css";
+
+/*  COMPONENTS (UI) */
+@import "css/components/button.component.css";
+@import "css/components/input.component.css";
+@import "css/components/card.component.css";
+@import "css/components/reel.component.css";
+
+.upperPortion {
+  background-image: url(./img/desert.jpg);
+  color: white;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.timeArea {
+  font-size: large;
+  margin-top: 10px;
+}
+
+.totalBalance {
+  font-size: xx-large;
+}
+
+.incomeArea {
+  display: flex;
+  justify-content: space-between;
+  background-color: #38b2ad;
+  padding: 10px;
+  margin-top: 26px;
+  margin-bottom: 12px;
+  padding-right: 50px;
+}
+
+.income {
+  display: flex;
+}
+
+.expensesArea {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f83d41;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.expensesAndPercentage {
+  display: flex;
+}
+
+.percentage {
+  background-color: #f55555;
+  width: 30px;
+}
+
+.middlePortion {
+  background-color: #f5f0f5;
+}
+
+.middleWrapper {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.middleWrapper input {
+  margin-inline: 10px;
+}
+
 #listsContainer {
   display: flex;
   flex-wrap: wrap;
