@@ -5,23 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Budget</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <body>
+
     <div id="budgetContainer" class = 'upperPortion'>
-      
-      <div id="timeArea"></div>
-      <div id="totalBalance"></div>
-      <div id="incomeArea"></div>
-      <div id="expensesArea"></div>
+      <div class="wrapper">
+        <div id="timeArea" class="timeArea">Available Budget in 
+
+        </div>
+        <div id="totalBalance" class = 'totalBalance'>balance
+
+        </div>
+        <div id="incomeArea" class="incomeArea">
+          <p style="color: black;">INCOME</p>
+          <div class="income">
+            <p>+</p>
+            <p>100000</p>
+          </div>
+        </div>
+
+        <div id="expensesArea" class = 'expensesArea'>
+          <p style="color: black;">EXPENSES</p>
+          <div class="expensesAndPercentage">
+            <p>-</p>
+            <p style="margin-right: 10px;">100000</p>
+            <p class="percentage">-</p>
+          </div>
+        </div>
 
       </div>
+    </div>
       
 
-    </div id="inputContainer" class = 'middlePortion'>
+    <div id="inputContainer" class = 'middlePortion'>
+      
+      <div class = 'middleWrapper'>
 
-      <select name="toggle" id="toggle"></select>
-      <input type="text">
-      <input type="text">
+        <select name = "toggle" id="toggle" style="width: 60px; height: 40px">
+          <option value = "plus">+</option>
+          <option value = "minus">-</option>
+        </select>
+  
+        <input id="descriptionID" type="text" style="width: 360px;" placeholder="Add description">
+
+        <input id="valueID" type="text" style="width: 100px;" placeholder="Value">
+
+        <!-- <button style="width: 40px; height: 40px">V</button> -->
+
+        <i class="far fa-check-circle" style="font-size: xx-large;" onclick="submit()"></i>
+
+      </div>
 
     </div>
 
@@ -30,12 +64,6 @@
 
     </div>
 
-      
-    
-    
-    
-    
-    
     <script src="MyBudget.js"></script>
   </body>
 </html>
