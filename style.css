@@ -74,6 +74,7 @@
 
 .middleWrapper input {
   margin-inline: 10px;
+  /* border-color: #f55555; */
 }
 
 #listsContainer {

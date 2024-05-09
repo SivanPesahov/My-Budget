@@ -47,8 +47,8 @@ functions:
 
     - showDate() = display date
 
-- deleteRow(element) = find index of element inside elemList.children.indexOf(element) and splice it from the corresponding array, using element.remove to remove it from the DOM, update sum of corresponding array, updateBalance saveToLocalStorage(key, arr)
-
 - toggleClicked() = change the color of the input and V based on the toggleElement.value
+
+- deleteRow(element) = find index of element inside elemList.children.indexOf(element) and splice it from the corresponding array, using element.remove to remove it from the DOM, update sum of corresponding array, updateBalance saveToLocalStorage(key, arr)
 
   - - eventListener onClick 'enter' => submit()

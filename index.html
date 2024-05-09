@@ -36,7 +36,7 @@
 
     <div id="inputContainer" class="middlePortion">
       <div class="middleWrapper">
-        <select name="toggle" id="toggle" style="width: 60px; height: 40px">
+        <select name="toggle" id="toggle" style="width: 60px; height: 40px" onclick="toggleClicked(this)">
           <option value="plus">+</option>
           <option value="minus">-</option>
         </select>
@@ -59,7 +59,8 @@
 
         <i
           class="far fa-check-circle"
-          style="font-size: xx-large"
+          style="font-size: xx-large; margin-top: 3px"
+          id="vID"
           onclick="submit()"
         ></i>
       </div>

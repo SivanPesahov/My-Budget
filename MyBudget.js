@@ -6,9 +6,13 @@ let expensesArr = readFromLocalStorage(expensesArrKey);
 let totalIncome = calculateTotal(incomeArr);
 let totalExpenses = calculateTotal(expensesArr);
 
-let elemToggle;
+
 let elemIncomeList = document.querySelector("#incomeList");
 let elemExpensesList = document.querySelector("#expensesList");
+let elemInput = document.querySelector('#descriptionID')
+let elemValue = document.querySelector('#valueID')
+let elemToggle = document.querySelector("#toggle")
+let elemV = document.querySelector('#vID')
 
 let elemDate;
 
@@ -23,7 +27,6 @@ function getInputs(){
 }
 
 function addToArr(obj){
-    elemToggle = document.querySelector("#toggle")
     if(elemToggle.value == 'plus'){
         incomeArr.push(obj)
         totalIncome += obj.amount
@@ -35,6 +38,25 @@ function addToArr(obj){
         addRow(obj, elemExpensesList)
 
     }
+}
+
+function toggleClicked(element){
+    if(element.value == 'plus'){
+        changeColorV('green', elemV)
+    }
+    else{
+        changeColorV('red', elemV)
+    }
+}
+
+function changeColorInput(color, element){
+    
+    element.style.borderColor = color;
+}
+
+function changeColorV(color, element){
+    
+    element.style.color = color;
 }
 
 function updateBalance(totalIncome, totalExpenses){
@@ -94,7 +116,32 @@ function validateInput(obj){
     }
 }
 
+function addEvent(element){
+    element.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            submit()
+          }
+    })
+    element.addEventListener('focus', function() {
+        if(elemToggle.value == 'plus'){
+            changeColorInput('green', element)
+        }
+        else{
+            changeColorInput('red', element)
+        }
+    })
+    element.addEventListener('blur', function() {
+        if(elemToggle.value == 'plus'){
+            changeColorInput('', element)
+        }
+        else{
+            changeColorInput('', element)
+        }
+    })
+}
 
-
+addEvent(elemInput)
+addEvent(elemValue)
 displayRowsFromLocalStorage(incomeArr, elemIncomeList);
 displayRowsFromLocalStorage(expensesArr, elemExpensesList);
+
