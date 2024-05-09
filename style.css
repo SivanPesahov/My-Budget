@@ -1,0 +1,47 @@
+@import url("./css/reset.css");
+@import url("./css/variables.css");
+#listsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#listsContainer > * {
+  flex: 1;
+}
+
+.income__list {
+  color: var(--clr-income);
+}
+
+.expenses__list {
+  color: var(--clr-expenses);
+}
+
+#listsContainer li {
+  display: flex;
+  justify-content: space-between;
+  border-block: 1px solid lightgrey;
+  padding: 0.5rem;
+}
+
+#listsContainer li:nth-child(even) {
+  background-color: var(--clr-neutral-300);
+}
+
+#listsContainer li div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  i {
+    display: none;
+  }
+}
+
+#listsContainer li div:hover {
+  i {
+    display: block;
+    cursor: pointer;
+  }
+}

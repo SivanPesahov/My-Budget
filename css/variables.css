@@ -9,6 +9,10 @@
   --clr-neutral-450: hsl(30, 10%, 34%);
   --clr-neutral-750: hsl(24, 5%, 18%);
 
+  --clr-income: #32a5a0;
+  --clr-expenses: #f53237;
+  --clr-neutral-300: #f5f0f5;
+
   --large-brakepoint: 375px;
   --small-brakepoint: 1440px;
 

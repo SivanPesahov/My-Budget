@@ -4,38 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Budget</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
-    <div id="budgetContainer" class = 'upperPortion'>
-      
+    <div id="budgetContainer" class="upperPortion">
       <div id="timeArea"></div>
       <div id="totalBalance"></div>
       <div id="incomeArea"></div>
       <div id="expensesArea"></div>
+    </div>
 
-      </div>
-      
-
-    </div id="inputContainer" class = 'middlePortion'>
-
+    <div id="inputContainer" class="middlePortion">
       <select name="toggle" id="toggle"></select>
-      <input type="text">
-      <input type="text">
-
+      <input type="text" />
+      <input type="text" />
     </div>
 
-    
-    <div id="listsContainer" class = 'lowerPortion'>
-
+    <div id="listsContainer" class="lowerPortion">
+      <div class="income__list">
+        <h3>Income</h3>
+        <ul id="incomeList"></ul>
+      </div>
+      <div class="expenses__list">
+        <h3>Expenses</h3>
+        <ul id="expensesList"></ul>
+      </div>
     </div>
 
-      
-    
-    
-    
-    
-    
     <script src="MyBudget.js"></script>
   </body>
 </html>
