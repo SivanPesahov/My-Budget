@@ -13,13 +13,13 @@
   <body>
     <div id="budgetContainer" class="upperPortion">
       <div class="wrapper">
-        <div id="timeArea" class="timeArea">Available Budget in</div>
-        <div id="totalBalance" class="totalBalance">balance</div>
+        <div id="timeArea" class="timeArea"></div>
+        <div id="totalBalance" class="totalBalance"></div>
         <div id="incomeArea" class="incomeArea">
           <p style="color: black">INCOME</p>
           <div class="income">
             <p>+</p>
-            <p>100000</p>
+            <p id="incomeTotal"></p>
           </div>
         </div>
 
@@ -27,7 +27,7 @@
           <p style="color: black">EXPENSES</p>
           <div class="expensesAndPercentage">
             <p>-</p>
-            <p style="margin-right: 10px">100000</p>
+            <p style="margin-right: 10px" id="expensesTotal"></p>
             <p class="percentage">-</p>
           </div>
         </div>
@@ -36,7 +36,12 @@
 
     <div id="inputContainer" class="middlePortion">
       <div class="middleWrapper">
-        <select name="toggle" id="toggle" style="width: 60px; height: 40px" onclick="toggleClicked(this)">
+        <select
+          name="toggle"
+          id="toggle"
+          style="width: 60px; height: 40px"
+          onclick="toggleClicked(this)"
+        >
           <option value="plus">+</option>
           <option value="minus">-</option>
         </select>
