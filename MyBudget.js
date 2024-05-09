@@ -18,6 +18,7 @@ const elemDate = document.querySelector("#timeArea");
 const elemBalance = document.querySelector("#totalBalance");
 const elemIncomeTotal = document.querySelector("#incomeTotal");
 const elemExpensesTotal = document.querySelector("#expensesTotal");
+const elemPercentage = document.querySelector("#percentageId"); 
 
 //------------------------------------------------
 
@@ -76,8 +77,10 @@ function submit() {
     addToArr(obj);
     displayTotals();
     displayBalance();
-    saveToLocalStorage("incomeArrKey", incomeArr);
-    saveToLocalStorage("expensesArrKey", expensesArr);
+    displayRows(expensesArr, elemExpensesList);
+
+    saveToLocalStorage(incomeArrKey, incomeArr);
+    saveToLocalStorage(expensesArrKey, expensesArr);
   }
 }
 
@@ -116,7 +119,15 @@ function addRow(obj, elemList) {
     obj.description
   }</p><div><p class="item_amount">${symbol}${obj.amount.toFixed(
     2
-  )}</p><i class="fa-regular fa-circle-xmark" onclick="deleteRow(this)"></i></div></li>`;
+  )}</p>
+  
+  ${symbol == '-' ? `<div class = 'percentage'> <p>${parseFloat((obj.amount / totalIncome)*100).toFixed(0)}%</p></div>`:""}
+  <i class="fa-regular fa-circle-xmark" onclick="deleteRow(this)"></i></div></li>`; 
+
+}
+
+function createList(){
+  
 }
 
 function deleteRow(element) {
@@ -145,7 +156,8 @@ function deleteRow(element) {
   displayBalance();
 }
 
-function displayRowsFromLocalStorage(arr, elemList) {
+function displayRows(arr, elemList) {
+  elemList.innerHTML = ''
   arr.forEach((obj) => {
     addRow(obj, elemList);
   });
@@ -161,6 +173,8 @@ function displayDate() {
 function displayTotals() {
   elemIncomeTotal.innerText = totalIncome.toFixed(2);
   elemExpensesTotal.innerText = totalExpenses.toFixed(2);
+  elemPercentage.innerText = `${((totalExpenses/totalIncome)*100).toFixed(0)}%`
+
 }
 
 function displayBalance() {
@@ -193,8 +207,8 @@ function addEvent(element){
 
 addEvent(elemInput)
 addEvent(elemValue)
-displayRowsFromLocalStorage(incomeArr, elemIncomeList);
-displayRowsFromLocalStorage(expensesArr, elemExpensesList);
+displayRows(incomeArr, elemIncomeList);
+displayRows(expensesArr, elemExpensesList);
 displayDate();
 displayTotals();
 displayBalance();

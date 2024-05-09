@@ -15,6 +15,9 @@
 
 .upperPortion {
   background-image: url(./img/desert.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  aspect-ratio: 5/1;
   color: white;
 }
 
@@ -23,12 +26,12 @@
 }
 
 .timeArea {
-  font-size: large;
+    font-size: 20px;
   margin-top: 10px;
 }
 
 .totalBalance {
-  font-size: xx-large;
+  font-size: 60px;
 }
 
 .incomeArea {
@@ -60,6 +63,10 @@
 .percentage {
   background-color: #f55555;
   width: 30px;
+  color: white;
+  font-size: small;
+  padding-inline: 2px;
+  
 }
 
 .middlePortion {
