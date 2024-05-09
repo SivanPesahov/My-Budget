@@ -18,7 +18,7 @@ let elemDate;
 function getInputs(){
     let elemDescriptionInput = document.querySelector("#descriptionID")
     let elemValueInput = document.querySelector("#valueID")
-    let newObj = {description : elemDescriptionInput.value, amount : elemValueInput.value}
+    let newObj = {description : elemDescriptionInput.value, amount : parseFloat(elemValueInput.value)}
     return newObj
 }
 
@@ -27,10 +27,13 @@ function addToArr(obj){
     if(elemToggle.value == 'plus'){
         incomeArr.push(obj)
         totalIncome += obj.amount
+        addRow(obj, elemIncomeList)
     }
     else{
         expensesArr.push(obj)
         totalExpenses += obj.amount
+        addRow(obj, elemExpensesList)
+
     }
 }
 
@@ -44,13 +47,12 @@ function saveToLocalStorage(key, arr){
 
 function submit(){
     let obj = getInputs()
-    // if (validateInput(obj)){
+    if (validateInput(obj)){
         addToArr(obj)
         updateBalance(totalIncome, totalExpenses)
-        //addRow()
         saveToLocalStorage("incomeArrKey", incomeArr)
         saveToLocalStorage("expensesArrKey", expensesArr)
-    // }
+    }
 }
 
 function readFromLocalStorage(key) {
@@ -81,6 +83,18 @@ function displayDate() {
     { month: "long", year: "numeric" }
   )}`;
 }
+
+function validateInput(obj){
+    console.log(obj)
+    if(isFinite(obj.amount) && (obj.description != null) && (obj.description.trim() !== '')){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+
 
 displayRowsFromLocalStorage(incomeArr, elemIncomeList);
 displayRowsFromLocalStorage(expensesArr, elemExpensesList);
