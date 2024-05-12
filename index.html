@@ -11,75 +11,68 @@
     />
   </head>
   <body>
-    <div id="budgetContainer" class="upperPortion">
-      <div class="wrapper">
-        <div id="timeArea" class="timeArea"></div>
-        <div id="totalBalance" class="totalBalance"></div>
-        <div id="incomeArea" class="incomeArea">
+    <div class="background-image wrapper-small">
+      <div></div>
+      <div class="budget__container">
+        <h2 id="date" class="budget__date"></h2>
+        <h1 id="totalBalance" class="budget__total-balance"></h1>
+        <div class="budget__income-balance">
           <p style="color: black">INCOME</p>
-          <div class="income">
-            <p>+</p>
-            <p id="incomeTotal"></p>
-          </div>
+          <p id="incomeTotal"></p>
         </div>
 
-        <div id="expensesArea" class="expensesArea">
+        <div class="budget__expenses-balance">
           <p style="color: black">EXPENSES</p>
-          <div class="expensesAndPercentage">
-            <p>-</p>
-            <p style="margin-right: 10px" id="expensesTotal"></p>
-            <p class="percentage" id="percentageId"></p>
+          <div class="budget__expenses-percentage">
+            <p id="expensesTotal"></p>
+            <p class="percentage__container" id="totalPercentage"></p>
           </div>
         </div>
       </div>
+      <div></div>
     </div>
 
-    <div id="inputContainer" class="middlePortion">
-      <div class="middleWrapper">
-        <select
-          name="toggle"
-          id="toggle"
-          style="width: 60px; height: 40px"
-          onclick="toggleClicked(this)"
-        >
-          <option value="plus">+</option>
-          <option value="minus">-</option>
+    <div
+      class="wrapper-medium"
+      style="background-color: var(--clr-neutral-300)"
+    >
+      <div></div>
+      <div class="input__container">
+        <select id="typeToggle" onclick="toggleClicked(this)">
+          <option value="income">+</option>
+          <option value="expenses">-</option>
         </select>
 
         <input
-          id="descriptionID"
+          id="descriptionInput"
           type="text"
-          style="width: 360px"
           placeholder="Add description"
         />
 
-        <input
-          id="valueID"
-          type="text"
-          style="width: 100px"
-          placeholder="Value"
-        />
-
-        <!-- <button style="width: 40px; height: 40px">V</button> -->
+        <input id="amountInput" type="text" placeholder="Value" />
 
         <i
-          class="far fa-check-circle"
-          style="font-size: xx-large; margin-top: 3px"
-          id="vID"
+          class="far fa-check-circle fa-2x"
+          id="submitButton"
           onclick="submit()"
         ></i>
       </div>
+      <div></div>
     </div>
 
-    <div id="listsContainer" class="lowerPortion">
-      <div class="income__list">
-        <h3>Income</h3>
-        <ul id="incomeList"></ul>
+    <div class="wrapper-large">
+      <div></div>
+      <div class="transactions__container">
+        <div class="income__container">
+          <h3>Income</h3>
+          <ul id="incomeList"></ul>
+        </div>
+        <div class="expenses__container">
+          <h3>Expenses</h3>
+          <ul id="expensesList"></ul>
+        </div>
       </div>
-      <div class="expenses__list">
-        <h3>Expenses</h3>
-        <ul id="expensesList"></ul>
-      </div>
+      <div></div>
     </div>
 
     <script src="MyBudget.js"></script>

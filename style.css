@@ -1,129 +1,166 @@
 @import "css/reset.css";
 @import "css/variables.css";
 
-/*  UTILS */
-@import "css/utils/layout.utils.css";
-@import "css/utils/spacing.utils.css";
-@import "css/utils/typography.utils.css";
-@import "css/utils/flex-grid.utils.css";
-
-/*  COMPONENTS (UI) */
-@import "css/components/button.component.css";
-@import "css/components/input.component.css";
-@import "css/components/card.component.css";
-@import "css/components/reel.component.css";
-
-.upperPortion {
-  background-image: url(./img/desert.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  aspect-ratio: 5/1;
-  color: white;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
 }
 
-.wrapper {
+.wrapper-small {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto, 400px) minmax(1rem, 1fr);
+  grid-gap: 1rem;
+}
+.wrapper-medium {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto, 600px) minmax(1rem, 1fr);
+  grid-gap: 1rem;
+}
+.wrapper-large {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1000px) minmax(
+      1rem,
+      1fr
+    );
+  grid-gap: 1rem;
+}
+
+.background-image {
+  background: url(./img/desert.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.budget__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  padding-block: 2rem;
   text-align: center;
 }
 
-.timeArea {
-    font-size: 20px;
-  margin-top: 10px;
+.budget__date {
+  font-size: 1.5rem;
 }
 
-.totalBalance {
-  font-size: 60px;
+.budget__total-balance {
+  font-size: 4rem;
 }
 
-.incomeArea {
+.budget__income-balance {
   display: flex;
   justify-content: space-between;
-  background-color: #38b2ad;
+  flex-wrap: wrap;
+  background-color: var(--clr-income);
   padding: 10px;
-  margin-top: 26px;
-  margin-bottom: 12px;
-  padding-right: 50px;
+  padding-inline-end: 60px;
 }
 
-.income {
-  display: flex;
-}
-
-.expensesArea {
+.budget__expenses-balance {
   display: flex;
   justify-content: space-between;
-  background-color: #f83d41;
+  flex-wrap: wrap;
+  background-color: var(--clr-expenses);
   padding: 10px;
-  margin-bottom: 12px;
 }
 
-.expensesAndPercentage {
+.budget__expenses-percentage {
   display: flex;
+  gap: 1rem;
 }
 
-.percentage {
-  background-color: #f55555;
-  width: 30px;
-  color: white;
-  font-size: small;
-  padding-inline: 2px;
-  
+.percentage__container {
+  background-color: var(--clr-accent);
+  font-size: 0.7rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.2rem;
+  border-radius: 0.2rem;
 }
 
-.middlePortion {
-  background-color: #f5f0f5;
-}
-
-.middleWrapper {
-  padding: 16px;
+.input__container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 0.8rem;
 }
 
-.middleWrapper input {
-  margin-inline: 10px;
-  /* border-color: #f55555; */
+input,
+select {
+  border: 1px solid lightgray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: var(--clr-neutral-900);
+  transition: border-color 0.3s ease;
 }
 
-#listsContainer {
+input:focus,
+select:focus {
+  outline: none;
+}
+
+#descriptionInput {
+  flex-grow: 1;
+}
+#amountInput {
+  width: 150px;
+}
+
+.transactions__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
+  padding-block: 2rem;
 }
 
-#listsContainer > * {
-  flex: 1;
+.transactions__container > * {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.income__list {
+.income__container {
   color: var(--clr-income);
 }
 
-.expenses__list {
+.expenses__container {
   color: var(--clr-expenses);
 }
 
-#listsContainer li {
+.transaction__item {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
   border-block: 1px solid lightgrey;
   padding: 0.5rem;
 }
 
-#listsContainer li:nth-child(even) {
+.transaction__item:nth-child(even) {
   background-color: var(--clr-neutral-300);
 }
 
-#listsContainer li div {
+.transaction__description {
+  color: black;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.transaction__details {
   display: flex;
   align-items: center;
   gap: 1rem;
+  transition: transform 1s;
   i {
     display: none;
   }
 }
 
-#listsContainer li div:hover {
+.transaction__details:hover {
+  transform: translateX(-8px);
   i {
     display: block;
     cursor: pointer;
