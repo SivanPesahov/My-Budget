@@ -32,6 +32,7 @@ function getInputs() {
 function validateInput(transaction) {
   if (
     isFinite(transaction.amount) &&
+    transaction.amount > 0 &&
     transaction.description != null &&
     transaction.description.trim() !== ""
   ) {
