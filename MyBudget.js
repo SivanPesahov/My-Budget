@@ -1,5 +1,5 @@
-const incomeArrKey = "INCOME_KEY";
-const expensesArrKey = "EXPENSES_KEY";
+// const incomeArrKey = "INCOME_KEY";
+// const expensesArrKey = "EXPENSES_KEY";
 
 let incomeArr = readFromLocalStorage(incomeArrKey);
 let expensesArr = readFromLocalStorage(expensesArrKey);
@@ -18,6 +18,8 @@ const elemBalance = document.querySelector("#totalBalance");
 const elemIncomeTotal = document.querySelector("#incomeTotal");
 const elemExpensesTotal = document.querySelector("#expensesTotal");
 const elemTotalPercentage = document.querySelector("#totalPercentage");
+
+let darkMode = false;
 
 //------------------------------------------------
 
@@ -71,14 +73,14 @@ function clearInputs() {
   elemAmountInput.value = "";
 }
 
-function saveToLocalStorage(key, arr) {
-  localStorage.setItem(key, JSON.stringify(arr));
-}
+// function saveToLocalStorage(key, arr) {
+//   localStorage.setItem(key, JSON.stringify(arr));
+// }
 
-function readFromLocalStorage(key) {
-  let temp = localStorage.getItem(key);
-  return temp !== null ? JSON.parse(temp) : [];
-}
+// function readFromLocalStorage(key) {
+//   let temp = localStorage.getItem(key);
+//   return temp !== null ? JSON.parse(temp) : [];
+// }
 
 function calculateTotal(arr) {
   return arr.reduce((sum, val) => {
@@ -189,6 +191,21 @@ function toggleClicked(element) {
 
 function setButtonColor(color, element) {
   element.style.color = color;
+}
+
+function changeBackGroundColor(){ 
+  if(darkMode == false){
+    darkMode = true
+  document.documentElement.style.setProperty('--clr-background', '#0d113de1')
+  document.documentElement.style.setProperty('--clr-container', '#0d113de1')
+  document.documentElement.style.setProperty('--clr-neutral-300', '#0d113de1')
+  }
+  else{
+    darkMode = false
+    document.documentElement.style.setProperty('--clr-background', '')
+    document.documentElement.style.setProperty('--clr-container', '')
+    document.documentElement.style.setProperty('--clr-neutral-300', '')
+  }
 }
 
 addEvent(elemDescriptionInput);
